@@ -3,8 +3,7 @@ const printToDom = (stringToPrint, selectedDiv) => {
     document.getElementById(selectedDiv).innerHTML += stringToPrint;
 };
 
-
-// Define value from user words input, and turn it into an array
+// Encrypter
 const encryptMyWords = () => {
     let toConvert = document.getElementById('wordsInput').value;
     let wordsArray = toConvert.split('');
@@ -18,9 +17,23 @@ const encryptMyWords = () => {
     })
 };
 
+// Decrypter
+const decryptMyWords =() => {
+    let toConvert = document.getElementById('secretInput').value.split(',');
+    let blah = '';
+    for (i=0; i<toConvert.length; i++) {
+        blah += String.fromCharCode(toConvert[i]);
+    }
+    printToDom(blah, 'outputDataWords');
+};
 
 // Button Event Listeners
 document.getElementById('encryptButton').addEventListener("click", (e) => {
     e.preventDefault();
     encryptMyWords();
+});
+
+document.getElementById('decryptButton').addEventListener("click", (e) => {
+    e.preventDefault();
+    decryptMyWords();
 })
