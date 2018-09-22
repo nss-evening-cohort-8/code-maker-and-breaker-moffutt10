@@ -1,5 +1,5 @@
 # Code Maker and Breaker
-A soul-crushing quiz in which we were tested on our ability to create and manage a repo on Github for a simple app that encodes words into UTF-16, and vice versa.
+A soul-crushing quiz in which we were tested on our ability to create and manage a repo on Github for a simple app that encodes words into UTF-16, and vice versa in a couple hours.
 
 ## Screenshot
 ![main screen shot](./screenshots/code.png)
