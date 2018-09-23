@@ -5,15 +5,14 @@ const printToDom = (stringToPrint, selectedDiv) => {
 
 // Encrypter
 const encryptMyWords = () => {
-    let toConvert = document.getElementById('wordsInput').value;
-    let wordsArray = toConvert.split('');
-    wordsArray.forEach(function(element, index) {
+    let toConvert = document.getElementById('wordsInput').value.split('');
+    toConvert.forEach(function(element, index) {
         element.charCodeAt(0);
-        let value = element.charCodeAt(0);
-        if (index < wordsArray.length-1) {
-            value += ',';
+        let blah = element.charCodeAt(0);
+        if (index < toConvert.length-1) {
+            blah += ',';
         }
-        printToDom(value, 'outputDataSecret');
+        printToDom(blah, 'outputDataSecret');
     })
 };
 
@@ -21,9 +20,9 @@ const encryptMyWords = () => {
 const decryptMyWords =() => {
     let toConvert = document.getElementById('secretInput').value.split(',');
     let blah = '';
-    for (i=0; i<toConvert.length; i++) {
-        blah += String.fromCharCode(toConvert[i]);
-    }
+    toConvert.forEach(function(element) {
+        blah += String.fromCharCode(element);
+    })
     printToDom(blah, 'outputDataWords');
 };
 
